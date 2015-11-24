@@ -554,7 +554,13 @@ section {
 .team-member:hover .social-icons ul li a.twitter {
   background-color: #2ac6f7;
 }
-.team-member:hover .social-icons ul li a.dribbble {
+.team-member:hover .social-icons ul li a.instagram {
+  background-color: #015873;
+}
+.team-member:hover .social-icons ul li a.github {
+  background-color: #c1c1c1;
+}
+/*.team-member:hover .social-icons ul li a.dribbble {
   background-color: #ff5b92;
 }
 .team-member:hover .social-icons ul li a.linkedin {
@@ -562,10 +568,7 @@ section {
 }
 .team-member:hover .social-icons ul li a.rss {
   background-color: #ff6b00;
-}
-.team-member:hover .social-icons ul li a.github {
-  background-color: #c1c1c1;
-}
+}*/
 
 #team .img-responsive {
   width: 100%;
