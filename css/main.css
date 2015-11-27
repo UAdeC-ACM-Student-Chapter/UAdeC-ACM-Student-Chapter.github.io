@@ -558,7 +558,7 @@ section {
   background-color: #015873;
 }
 .team-member:hover .social-icons ul li a.github {
-  background-color: #c1c1c1;
+  background-color: #999999;
 }
 /*.team-member:hover .social-icons ul li a.dribbble {
   background-color: #ff5b92;
