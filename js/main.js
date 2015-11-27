@@ -13,7 +13,7 @@ jQuery(function($) {
 	$(window).resize(function(){'use strict',
 		$('#home-slider .item').css('height',slideHeight);
 	});
-	
+
 	//Scroll Menu
 	$(window).on('scroll', function(){
 		if( $(window).scrollTop()>slideHeight ){
@@ -22,13 +22,13 @@ jQuery(function($) {
 			$('.main-nav').removeClass('navbar-fixed-top');
 		}
 	});
-	
+
 	// Navigation Scroll
 	$(window).scroll(function(event) {
 		Scroll();
 	});
 
-	$('.navbar-collapse ul li a').on('click', function() {  
+	$('.navbar-collapse ul li a').on('click', function() {
 		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
 		return false;
 	});
@@ -48,7 +48,7 @@ jQuery(function($) {
 			if ( winTop > contentTop[i] - rangeTop ){
 				$('.navbar-collapse li.scroll')
 				.removeClass('active')
-				.eq(i).addClass('active');			
+				.eq(i).addClass('active');
 			}
 		})
 	};
@@ -57,12 +57,12 @@ jQuery(function($) {
 		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
 		return false;
 	});
-	
+
 	//Initiat WOW JS
 	new WOW().init();
 	//smoothScroll
 	smoothScroll.init();
-	
+
 	// Progress Bar
 	$('#about-us').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
@@ -122,15 +122,15 @@ jQuery(function($) {
 	// Contact form
 	var form = $('#main-contact-form');
 	form.submit(function(event){
-		event.preventDefault();
+		//event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
 		$.ajax({
 			url: $(this).attr('action'),
 			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Se está enviando el correo electrónico...</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+			form_status.html('<p class="text-success">¡Gracias por contactárnos!. Te responderemos a la brevedad posible.</p>').delay(3000).fadeOut();
 		});
 	});
 
@@ -158,6 +158,5 @@ jQuery(function($) {
 		});
 	}
 	google.maps.event.addDomListener(window, 'load', initialize_map);
-	
-});
 
+});
